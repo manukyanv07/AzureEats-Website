@@ -19,6 +19,7 @@ For this demo reference, we built several consumer and line-of-business applicat
 
 # Deploy to Azure
 
+
 With the following ARM template you can automate the creation of the resources for this website.
 
 [![Deploy to Azure](Documents/Images/deploy-to-azure.png)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%manukyanv07%2FTailwindTraders-Website%2Fmaster%2FDeploy%2Fdeployment.json)
