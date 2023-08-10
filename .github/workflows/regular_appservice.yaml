@@ -30,7 +30,9 @@ jobs:
         dotnet-version: 2.1.400
     - name: Build with dotnet
       working-directory: Source/Tailwind.Traders.Web
-      run: dotnet build --configuration Release
+      run:
+        - ln -s /usr/lib/libssl.so.47.0.6 /usr/lib/libssl.so.1.0.0
+        - dotnet build --configuration Release
     - name: dotnet publish
       working-directory: Source/Tailwind.Traders.Web
       run: |
@@ -44,7 +46,7 @@ jobs:
 
     - name: Run Azure webapp deploy action
       uses: azure/webapps-deploy@v1
-      with: 
+      with:
         app-name: ${{ secrets.WEBAPP_APPSERVICE_NAME }}
         package: ${{env.DOTNET_ROOT}}/Source/Tailwind.Traders.Web
 
