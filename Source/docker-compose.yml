@@ -14,4 +14,3 @@ services:
       - B2CAuth:Scopes=
     ports:
       - "2000:80"
-
